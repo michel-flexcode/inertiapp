@@ -21,7 +21,7 @@ class TaskFactory extends Factory
             'name' => $this->faker()->bs(),
             'description' => $this->faker->sentence,
             'isDone' => $this->faker->boolean,
-            'user_id' => User::inRandomOrder()->first()->id, // Assuming you have users in your database
+            'user_id' => User::get()->random()->id, // Assuming you have users in your database
         ];
     }
 }
