@@ -18,6 +18,7 @@ class TaskFactory extends Factory
     public function definition(): array
     {
         return [
+            'name' => $this->faker()->bs(),
             'description' => $this->faker->sentence,
             'isDone' => $this->faker->boolean,
             'user_id' => User::inRandomOrder()->first()->id, // Assuming you have users in your database
